@@ -8,7 +8,7 @@ def test_getTotalStudents():
 
 def test_AddStudents():
     mlopsObj.AddStudents()
-    assert mlopsObj.getTotalStudents() == 6    
+    assert mlopsObj.getTotalStudents() == 6   
 
 def test_removeStudents():
     mlopsObj.removeStudents()
