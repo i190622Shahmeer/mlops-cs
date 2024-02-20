@@ -9,7 +9,7 @@ class MLOps:
         self.totalStudents = self.totalStudents + 1
     
     def removeStudents(self):
-        self.totalStudents -= self.totalStudents - 1
+        self.totalStudents = self.totalStudents - 1
 
     def getClassName(self):
         return "Machine Learning Operations (CS-B)"
