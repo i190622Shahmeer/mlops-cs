@@ -2,39 +2,39 @@
 pipeline {
     agent any
     stages {
-        // stage('Clone Repository') {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/i190622Shahmeer/mlops-cs.git'
+            }
+        }
+
+        
+        
+        // stage('Install Dependencies') {
         //     steps {
-        //         git 'https://github.com/i190622Shahmeer/mlops-cs.git'
+        // sh 'pip install -r requirements.txt'
         //     }
         // }
 
-        
-        
-        stage('Install Dependencies') {
-            steps {
-        sh 'pip install -r requirements.txt'
-            }
-        }
+        // stage('Run Tests') {
+        //     steps {
+        //         sh 'python test.py'
+        //     }
+        // }
 
-        stage('Run Tests') {
-            steps {
-                sh 'python test.py'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                script {
-                    if (env.BRANCH_NAME == 'main') {
-                        echo 'Deploying to production'
+        // stage('Deploy') {
+        //     steps {
+        //         script {
+        //             if (env.BRANCH_NAME == 'main') {
+        //                 echo 'Deploying to production'
                     
-                    } else {
-                        echo 'Deploying to UAT'
+        //             } else {
+        //                 echo 'Deploying to UAT'
                     
-                    }
-                }
-            }
-        }
+        //             }
+        //         }
+        //     }
+        // }
 
 
 
