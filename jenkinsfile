@@ -10,31 +10,31 @@ pipeline {
 
         
         
-        // stage('Install Dependencies') {
-        //     steps {
-        // sh 'pip install -r requirements.txt'
-        //     }
-        // }
+        stage('Install Dependencies') {
+            steps {
+        sh 'pip install -r requirements.txt'
+            }
+        }
 
-        // stage('Run Tests') {
-        //     steps {
-        //         sh 'python test.py'
-        //     }
-        // }
+        stage('Run Tests') {
+            steps {
+                sh 'python test.py'
+            }
+        }
 
-        // stage('Deploy') {
-        //     steps {
-        //         script {
-        //             if (env.BRANCH_NAME == 'main') {
-        //                 echo 'Deploying to production'
+        stage('Deploy') {
+            steps {
+                script {
+                    if (env.BRANCH_NAME == 'main') {
+                        echo 'Deploying to production'
                     
-        //             } else {
-        //                 echo 'Deploying to UAT'
+                    } else {
+                        echo 'Deploying to UAT'
                     
-        //             }
-        //         }
-        //     }
-        // }
+                    }
+                }
+            }
+        }
 
 
 
